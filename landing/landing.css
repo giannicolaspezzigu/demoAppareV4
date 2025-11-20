@@ -1,0 +1,113 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.launch-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Canvas acqua */
+#waterCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 0;
+}
+
+.launch-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: transparent;
+}
+
+.launch-card {
+  max-width: 640px;
+  width: 100%;
+  padding: 16px 24px 20px;
+  background: transparent;
+  text-align: center;
+  color: #f9fafb;
+}
+
+.launch-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15,118,110,0.35);
+  color: #a5f3fc;
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+.launch-logo-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.launch-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 4px 0 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.launch-subtitle {
+  font-size: 15px;
+  color: #e5e7eb;
+  opacity: 0.95;
+  margin-bottom: 22px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.launch-badges {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.launch-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.launch-footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #e5e7eb;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 640px) {
+  .launch-title { font-size: 22px; }
+  .launch-card { padding: 12px 16px; }
+}
