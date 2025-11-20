@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>appàre – Qualità del Latte · Benchmark (GOIA SILVIA)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+  
+  <script defer src="dataLoader.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="mieiDati.js"></script>
+ 
+ 
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg class="logo-agrivet" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#16a34a"></circle>
+          <path d="M6 13c4-2 8-2 12 0" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
+          <circle cx="9" cy="10" r="1.6" fill="white"></circle><circle cx="15" cy="10" r="1.6" fill="white"></circle>
+        </svg>
+        <strong>AgriVet</strong>
+      </div>
+      <div class="brand-badge">A</div>
+      <div class="brand-title">appàre</div>
+    </div>
+    <nav class="nav">
+      <a href="#" class="active">🏠 Home</a>
+      <a href="#">📊 Produzioni Animali</a>
+      <a href="#">🩺 Sanità Animale</a>
+      <a href="#">🧪 Sicurezza Alimentare</a>
+      <a href="#">🌾 Produzioni Foraggere</a>
+      <a href="#">🩻 Controllo Medico</a>
+      <a href="#">👤 Ricerca Individuo</a>
+      <a href="#">🗺️ Esplora</a>
+    </nav>
+
+    <button
+      class="ui-switch-button ui-red"
+      data-tip="Passa alla UI Trasformatore"
+      onclick="location.href='indexTrasformatore.html'">
+      UI Trasformatore
+      <span class="ui-arrow-right">➜</span>
+    </button>
+
+
+
+
+
+  </aside>
+
+  <main class="main">
+    <div class="topbar"><div class="topbar-inner">
+      <div class="breadcrumbs"><span class="muted">Produzioni Animali</span> › Qualità del Latte</div>
+      
+      <div class="actions">
+    <button id="demo" data-credit="demo" class="select compact" title="Credit">Demo</button>
+    </div>
+      
+    </div></div>
+
+    <section class="container">
+      <div class="subtabs">
+        <a href="#" class="tab">Lista animali</a>
+        <a href="#" class="tab">Gruppi</a>
+        <a href="#" class="tab active">Qualità del Latte</a>
+        <a href="#" class="tab">Storico</a>
+
+        <span class="role-label">allevatore</span>
+      </div>
+
+      <div class="filters">
+        <div class="select">
+          <label for="indicatore">Indicatore</label>
+          <select id="indicatore">
+            <option value="cellule">Cellule Somatiche</option>
+            <option value="carica">Carica Batterica</option>
+            <option value="urea">Urea</option>
+            <option value="grassi">Grassi</option>
+            <option value="proteine">Proteine</option>
+          </select>
+        </div>
+        <div class="select">Azienda: <strong id="aziendaHeader">GOIA SILVIA</strong></div>
+        <div class="toggle" id="viewToggle" data-active="conf">
+          <span class="bg"></span>
+          <input type="radio" id="miei-dati" name="view">
+          <label for="miei-dati">Performance</label>
+          <input type="radio" id="confronto" name="view" checked>
+          <label for="confronto">Benchmark</label>
+        </div>
+        
+        <div class="benchmark-options" id="benchmarkOptions" style="display: flex; align-items: center; gap: 12px;">
+          <span class="benchmark-label">VS</span>
+          <div class="select compact">
+            <select id="benchmarkType">
+              <option value="intraAppare">IntraAppare</option>
+              <option value="intraCaseificio">IntraCaseificio</option>
+              <option value="regione">Regione</option>
+            </select>
+          </div>
+          <span class="benchmark-label">Provincia:</span>
+          <div class="select compact">
+            <select id="provinciaFilter">
+              <option value="tutte">Tutte</option>
+              <option value="sassari">Sassari</option>
+              <option value="nuoro">Nuoro</option>
+              <option value="oristano">Oristano</option>
+              <option value="cagliari">Cagliari</option>
+            </select>
+          </div>
+
+          <!-- 🆕 qui appare la scritta "Caseificio: XXX" -->
+          <span id="caseificioLabel" class="muted" style="margin-left: 8px;"></span>
+          
+
+        </div>
+        </div>
+
+
+      <div class="view" id="view-miei">
+  <div class="grid-2">
+    <div class="card">
+      <div class="head">
+        <div>
+          <div class="card-title">Valori assoluiti KPI per campione (lattazione)</div>
+          <div class="muted"></div>
+        </div>
+        <div id="md-year-boxes" class="year-boxes"></div>
+      </div>
+      <div class="chart" id="mieiChartHost"><canvas id="md-chart"></canvas></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><strong>Andamento medie geometriche a norma di legge  - progressiva cumulativa </strong></div>
+      <div class="placeholder">—</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="view active" id="view-conf">
+        <div class="grid-2">
+          <div class="card">
+            <div class="head">
+              <div>
+                <div class="card-title">
+                  Posizionamento percentile (PR)
+                  <span id="benchmarkCount" class="muted" style="margin-left: 8px; font-weight: normal;"></span>
+                </div>
+                <div class="legend muted"></div>
+
+                
+                
+                
+              </div>
+              <div class="year-boxes">
+                <label><input type="checkbox" id="yr2023" checked> <span id="yr2023Lbl">2023-24</span></label>
+                <label><input type="checkbox" id="yr2024" checked> <span id="yr2024Lbl">2024-25</span></label>
+                <label><input type="checkbox" id="yr2025" checked> <span id="yr2025Lbl">2025-26</span></label>
+              </div>
+            </div>
+            <div class="explain muted">
+              La posizione percentile indica la collocazione dell’azienda rispetto a tutte le altre. <br>
+              <em>80° percentile</em> ⇒ migliore dell’80% delle aziende del campione.
+            </div>
+            <div class="chart" id="prChartHost"><canvas></canvas></div>
+
+            <div class="subhead">
+              <div class="card-title">Valore KPI: Azienda vs mediana del gruppo</div>
+              <div class="legend muted">
+              </div>
+            </div>
+            <div class="chart small" id="kpiChartHost"><canvas></canvas></div>
+          </div>
+
+          <div class="card">
+            <div class="head wrap">
+              <div>
+                <div class="card-title">Distribuzione del gruppo (istogramma)</div>
+                <div class="legend">asse X = valore KPI (bin automatici) · asse Y = frequenza %</div>
+              </div>
+              <div class="period-controls">
+                <label>Periodo</label>
+                <select id="distPreset" class="select compact">
+                  <option value="12" selected>Ultimo anno</option>
+                  <option value="24">Ultimi 2 anni</option>
+                  <option value="36">Ultimi 3 anni</option>
+                  <option value="custom">Intervallo personalizzato</option>
+                </select>
+                <div id="customPeriod" class="customPeriod">
+                  <span>Da</span><input type="month" id="fromMonth" class="select compact">
+                  <span>A</span><input type="month" id="toMonth" class="select compact">
+                  <button class="select compact" id="applyCustom">Applica</button>
+                </div>
+              </div>
+              <div id="posBadge" class="muted push">—° percentile</div>
+            </div>
+            <div class="chart" id="histChartHost"><canvas></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

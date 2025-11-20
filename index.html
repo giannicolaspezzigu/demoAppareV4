@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>appàre · Seleziona interfaccia</title>
+
+  <!-- CSS generale (serve per i bottoni 3D) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- CSS specifico della landing -->
+  <link rel="stylesheet" href="landing/landing.css" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<div class="launch-root">
+  <canvas id="waterCanvas"></canvas>
+
+  <div class="launch-overlay">
+    <div class="launch-card">
+      
+      <div class="launch-logo">
+        <span class="launch-logo-badge">A</span>
+        <span>appàre · Qualità del latte</span>
+      </div>
+
+      <h1 class="launch-title">Benvenuto in Appàre</h1>
+      <p class="launch-subtitle">
+        Scegli da vista esplorare: <br>
+        <strong>Allevatore</strong> oppure <strong>Trasformatore</strong>.
+      </p>
+
+      <div class="launch-badges">
+        Prototipo · UNISS
+      </div>
+
+      <div class="launch-buttons">
+        <button
+          class="ui-switch-button ui-red"
+          data-tip="Vai alla UI Allevatore"
+          onclick="location.href='indexAllevatore.html'">
+          UI Allevatore
+          <span class="ui-arrow-right">➜</span>
+        </button>
+
+        <button
+          class="ui-switch-button ui-blue"
+          data-tip="Vai alla UI Trasformatore"
+          onclick="location.href='indexTrasformatore.html'">
+          UI Trasformatore
+          <span class="ui-arrow-right">➜</span>
+        </button>
+      </div>
+
+      <div class="launch-footer">© 2025 · G.Spezzigu</div>
+    </div>
+  </div>
+</div>
+
+<!-- Script effetto acqua -->
+<script src="landing/water.js"></script>
+
+</body>
+</html>

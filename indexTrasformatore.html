@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>appàre – Qualità del Latte · UI Trasformatore</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js + annotation (come nell'index allevatore) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
+  
+  
+  
+  <!-- Carico il loader dati (lo riuseremo più avanti) -->
+  <script defer src="dataLoader.js"></script>
+
+  <!-- Loader dati caseificio CAO -->
+  <script defer src="loaderCaseificio.js"></script>
+
+
+
+  <!-- Nuovi script dedicati al trasformatore -->
+  <script defer src="performanceTrasformatore.js"></script>
+  <script defer src="benchmarkTrasformatore.js"></script>
+</head>
+<body>
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg class="logo-agrivet" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#16a34a"></circle>
+          <path d="M6 13c4-2 8-2 12 0" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
+          <circle cx="9" cy="10" r="1.6" fill="white"></circle>
+          <circle cx="15" cy="10" r="1.6" fill="white"></circle>
+        </svg>
+        <strong>AgriVet</strong>
+      </div>
+      <div class="brand-badge">A</div>
+      <div class="brand-title">appàre</div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="active">🏠 Home</a>
+      <a href="#">📊 Produzioni Animali</a>
+      <a href="#">🩺 Sanità Animale</a>
+      <a href="#">🧪 Sicurezza Alimentare</a>
+      <a href="#">🌾 Produzioni Foraggere</a>
+      <a href="#">🩻 Controllo Medico</a>
+      <a href="#">👤 Ricerca Individuo</a>
+      <a href="#">🗺️ Esplora</a>
+    </nav>
+
+    <button
+      class="ui-switch-button ui-blue"
+      data-tip="Passa alla UI Allevatore"
+      onclick="location.href='indexAllevatore.html'">
+      <span class="ui-arrow-left">⬅</span>
+      UI Allevatore
+    </button>
+
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="breadcrumbs">
+          <span class="muted">Produzioni Animali</span> › Qualità del Latte
+        </div>
+        <div class="actions">
+          <button id="demo" data-credit="demo" class="select compact" title="Credit">Demo</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <section class="container">
+      <!-- Sottoschede come nell'index -->
+      <div class="subtabs">
+        <a href="#" class="tab">Lista conferenti</a>
+        <a href="#" class="tab">Gruppi</a>
+        <a href="#" class="tab active">Qualità del Latte</a>
+        <a href="#" class="tab">Storico</a>
+
+        <span class="role-label">trasformatore</span>
+      </div>
+
+      <!-- FILTRI (stessi id dell'index allevatore) -->
+      <div class="filters">
+        <div class="select">
+          <label for="aziendaSelect">Caseificio</label>
+          <select id="aziendaSelect">
+            <option value="demo">C.A.O.-COOP. ALLEVATORI OVINI SOC.C </option>
+            
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="indicatore">Indicatore</label>
+          <select id="indicatore">
+            <option value="grassi">Grassi</option>
+            <option value="proteine">Proteine</option>
+            <option value="lattosio">Lattosio</option>
+            <option value="caseina">Caseina</option>
+          </select>
+        </div>
+
+        <!-- TOGGLE PERFORMANCE / BENCHMARK spostato qui -->
+        <div class="toggle" id="viewToggle" data-active="confronto">
+          <span class="bg"></span>
+          <input type="radio" id="miei-dati" name="view">
+          <label for="miei-dati">Performance</label>
+          <input type="radio" id="confronto" name="view" checked>
+          <label for="confronto">Benchmark</label>
+        </div>
+
+        <!-- header azienda usato nello script -->
+  
+      </div>
+
+      <!-- Opzioni benchmark (senza scritta "Vista") -->
+      <div class="filters" style="justify-content:space-between;">
+
+        <div class="benchmark-options" id="benchmarkOptions" style="display:flex; align-items:center; gap:12px;">
+          <span class="benchmark-label">VS</span>
+          <div class="select compact">
+            <select id="benchmarkType">
+              <option value="intraAppare">IntraAppare</option>
+              <option value="intraCaseificio">IntraCaseificio</option>
+              <option value="regione">Regione</option>
+            </select>
+          </div>
+          <span class="benchmark-label">Provincia:</span>
+          <div class="select compact">
+            <select id="provinciaFilter">
+              <option value="tutte">Tutte</option>
+              <option value="sassari">Sassari</option>
+              <option value="nuoro">Nuoro</option>
+              <option value="oristano">Oristano</option>
+              <option value="cagliari">Cagliari</option>
+            </select>
+          </div>
+
+          <!-- dove scriveremo il nome del caseificio quando si seleziona intraCaseificio -->
+          <span id="caseificioLabel" class="muted" style="margin-left:8px;"></span>
+        </div>
+      </div>
+
+      <!-- VISTA PERFORMANCE (I miei dati) -->
+      <div class="view" id="view-miei">
+        <div class="grid-2">
+          <!-- Grafico principale "I miei dati" -->
+          <div class="card">
+            <div class="head wrap">
+              <div>
+                <div class="card-title">TOP Conferitori</div>
+                <div class="muted">Valori mensili per lattazione</div>
+              </div>
+              <div class="year-boxes" id="md-year-boxes">
+                <label><input type="checkbox" value="2023" checked> 2023-24</label>
+                <label><input type="checkbox" value="2024" checked> 2024-25</label>
+                <label><input type="checkbox" value="2025" checked> 2025-26</label>
+              </div>
+            </div>
+            <div class="chart" id="mieiChartHost">
+              <canvas id="md-chart"></canvas>
+            </div>
+          </div>
+
+          <!-- Placeholder andamento medie geometriche -->
+          <div class="card">
+            <div class="head">
+              <strong>?????????</strong>
+            </div>
+            <div class="placeholder">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VISTA BENCHMARK TRASFORMATORE -->
+      <!-- Differenza rispetto a index: niente grafico PR, solo KPI (sx) + Istogramma (dx) -->
+      <div class="view active" id="view-conf">
+        <div class="grid-2">
+          <!-- KPI: Caseificio vs mediana gruppo -->
+          <div class="card">
+            <div class="head wrap">
+              <div>
+                <div class="card-title">KPI: Dati Caseificio vs media del gruppo di aziende</div>
+                <div class="legend muted"></div>
+              </div>
+              <div class="year-boxes">
+                <label><input type="checkbox" id="yr2023" checked> <span id="yr2023Lbl">2023-24</span></label>
+                <label><input type="checkbox" id="yr2024" checked> <span id="yr2024Lbl">2024-25</span></label>
+                <label><input type="checkbox" id="yr2025" checked> <span id="yr2025Lbl">2025-26</span></label>
+              </div>
+            </div>
+            <div class="chart small" id="kpiChartHost">
+              <canvas></canvas>
+            </div>
+          </div>
+
+          <!-- Istogramma distribuzione gruppo -->
+          <div class="card">
+            <div class="head wrap">
+              <div>
+                <div class="card-title">Distribuzione del gruppo (istogramma)</div>
+                <div class="legend">
+                  asse X = valore KPI (bin automatici) · asse Y = frequenza %
+                </div>
+              </div>
+              <div class="period-controls">
+                <label>Periodo</label>
+                <select id="distPreset" class="select compact">
+                  <option value="12" selected>Ultimo anno</option>
+                  <option value="24">Ultimi 2 anni</option>
+                  <option value="36">Ultimi 3 anni</option>
+                  <option value="custom">Intervallo personalizzato</option>
+                </select>
+                <div id="customPeriod" class="customPeriod">
+                  <span>Da</span><input type="month" id="fromMonth" class="select compact">
+                  <span>A</span><input type="month" id="toMonth" class="select compact">
+                  <button class="select compact" id="applyCustom">Applica</button>
+                </div>
+              </div>
+              <div id="posBadge" class="muted push">—° percentile</div>
+            </div>
+            <div class="chart" id="histChartHost">
+              <canvas></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

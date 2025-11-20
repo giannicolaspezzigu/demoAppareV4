@@ -1,0 +1,1218 @@
+[
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2022,
+    "Mese": 11,
+    "Data": "2022-11-01",
+    "Valore": 5.246245
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2022,
+    "Mese": 11,
+    "Data": "2022-11-01",
+    "Valore": 4.707181
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2022,
+    "Mese": 11,
+    "Data": "2022-11-01",
+    "Valore": 4.322108
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2022,
+    "Mese": 11,
+    "Data": "2022-11-01",
+    "Valore": 3.481765
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2022,
+    "Mese": 12,
+    "Data": "2022-12-01",
+    "Valore": 5.452624
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2022,
+    "Mese": 12,
+    "Data": "2022-12-01",
+    "Valore": 4.811269
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2022,
+    "Mese": 12,
+    "Data": "2022-12-01",
+    "Valore": 4.644959
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2022,
+    "Mese": 12,
+    "Data": "2022-12-01",
+    "Valore": 3.620541
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 1,
+    "Data": "2023-01-01",
+    "Valore": 5.775141
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 1,
+    "Data": "2023-01-01",
+    "Valore": 5.079236
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 1,
+    "Data": "2023-01-01",
+    "Valore": 4.779659
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 1,
+    "Data": "2023-01-01",
+    "Valore": 3.839181
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 2,
+    "Data": "2023-02-01",
+    "Valore": 5.685246
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 2,
+    "Data": "2023-02-01",
+    "Valore": 5.190507
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 2,
+    "Data": "2023-02-01",
+    "Valore": 4.778534
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 2,
+    "Data": "2023-02-01",
+    "Valore": 3.921405
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 3,
+    "Data": "2023-03-01",
+    "Valore": 5.654129
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 3,
+    "Data": "2023-03-01",
+    "Valore": 5.153201
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 3,
+    "Data": "2023-03-01",
+    "Valore": 4.739676
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 3,
+    "Data": "2023-03-01",
+    "Valore": 3.874113
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 4,
+    "Data": "2023-04-01",
+    "Valore": 5.484078
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 4,
+    "Data": "2023-04-01",
+    "Valore": 5.112839
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 4,
+    "Data": "2023-04-01",
+    "Valore": 4.710435
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 4,
+    "Data": "2023-04-01",
+    "Valore": 3.86931
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 5,
+    "Data": "2023-05-01",
+    "Valore": 5.56611
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 5,
+    "Data": "2023-05-01",
+    "Valore": 5.124853
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 5,
+    "Data": "2023-05-01",
+    "Valore": 4.760485
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 5,
+    "Data": "2023-05-01",
+    "Valore": 3.885195
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 6,
+    "Data": "2023-06-01",
+    "Valore": 5.740869
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 6,
+    "Data": "2023-06-01",
+    "Valore": 5.20808
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 6,
+    "Data": "2023-06-01",
+    "Valore": 4.827508
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 6,
+    "Data": "2023-06-01",
+    "Valore": 3.945219
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 7,
+    "Data": "2023-07-01",
+    "Valore": 5.810648
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 7,
+    "Data": "2023-07-01",
+    "Valore": 5.243399
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 7,
+    "Data": "2023-07-01",
+    "Valore": 4.827656
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 7,
+    "Data": "2023-07-01",
+    "Valore": 3.966933
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 8,
+    "Data": "2023-08-01",
+    "Valore": 5.534117
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 8,
+    "Data": "2023-08-01",
+    "Valore": 5.100295
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 8,
+    "Data": "2023-08-01",
+    "Valore": 4.68887
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 8,
+    "Data": "2023-08-01",
+    "Valore": 3.8374
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 9,
+    "Data": "2023-09-01",
+    "Valore": 5.251149
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 9,
+    "Data": "2023-09-01",
+    "Valore": 4.93744
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 9,
+    "Data": "2023-09-01",
+    "Valore": 4.530708
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 9,
+    "Data": "2023-09-01",
+    "Valore": 3.674638
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 10,
+    "Data": "2023-10-01",
+    "Valore": 5.291012
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 10,
+    "Data": "2023-10-01",
+    "Valore": 4.919259
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 10,
+    "Data": "2023-10-01",
+    "Valore": 4.532762
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 10,
+    "Data": "2023-10-01",
+    "Valore": 3.680998
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 11,
+    "Data": "2023-11-01",
+    "Valore": 5.394689
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 11,
+    "Data": "2023-11-01",
+    "Valore": 4.957114
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 11,
+    "Data": "2023-11-01",
+    "Valore": 4.584201
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 11,
+    "Data": "2023-11-01",
+    "Valore": 3.716193
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2023,
+    "Mese": 12,
+    "Data": "2023-12-01",
+    "Valore": 5.496618
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2023,
+    "Mese": 12,
+    "Data": "2023-12-01",
+    "Valore": 5.001316
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2023,
+    "Mese": 12,
+    "Data": "2023-12-01",
+    "Valore": 4.63549
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2023,
+    "Mese": 12,
+    "Data": "2023-12-01",
+    "Valore": 3.720077
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 1,
+    "Data": "2024-01-01",
+    "Valore": 5.514277
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 1,
+    "Data": "2024-01-01",
+    "Valore": 5.069594
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 1,
+    "Data": "2024-01-01",
+    "Valore": 4.612434
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 1,
+    "Data": "2024-01-01",
+    "Valore": 3.766372
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 2,
+    "Data": "2024-02-01",
+    "Valore": 5.658332
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 2,
+    "Data": "2024-02-01",
+    "Valore": 5.195406
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 2,
+    "Data": "2024-02-01",
+    "Valore": 4.71363
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 2,
+    "Data": "2024-02-01",
+    "Valore": 3.874034
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 3,
+    "Data": "2024-03-01",
+    "Valore": 5.80077
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 3,
+    "Data": "2024-03-01",
+    "Valore": 5.298671
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 3,
+    "Data": "2024-03-01",
+    "Valore": 4.838161
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 3,
+    "Data": "2024-03-01",
+    "Valore": 3.975977
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 4,
+    "Data": "2024-04-01",
+    "Valore": 5.988653
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 4,
+    "Data": "2024-04-01",
+    "Valore": 5.416422
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 4,
+    "Data": "2024-04-01",
+    "Valore": 4.961232
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 4,
+    "Data": "2024-04-01",
+    "Valore": 4.076857
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 5,
+    "Data": "2024-05-01",
+    "Valore": 5.89317
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 5,
+    "Data": "2024-05-01",
+    "Valore": 5.381129
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 5,
+    "Data": "2024-05-01",
+    "Valore": 4.914028
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 5,
+    "Data": "2024-05-01",
+    "Valore": 4.037384
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 6,
+    "Data": "2024-06-01",
+    "Valore": 5.897754
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 6,
+    "Data": "2024-06-01",
+    "Valore": 5.381926
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 6,
+    "Data": "2024-06-01",
+    "Valore": 4.91858
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 6,
+    "Data": "2024-06-01",
+    "Valore": 4.031757
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 7,
+    "Data": "2024-07-01",
+    "Valore": 5.981856
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 7,
+    "Data": "2024-07-01",
+    "Valore": 5.470062
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 7,
+    "Data": "2024-07-01",
+    "Valore": 4.986267
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 7,
+    "Data": "2024-07-01",
+    "Valore": 4.105952
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 8,
+    "Data": "2024-08-01",
+    "Valore": 6.285615
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 8,
+    "Data": "2024-08-01",
+    "Valore": 5.642942
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 8,
+    "Data": "2024-08-01",
+    "Valore": 5.133784
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 8,
+    "Data": "2024-08-01",
+    "Valore": 4.257722
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 9,
+    "Data": "2024-09-01",
+    "Valore": 6.642207
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 9,
+    "Data": "2024-09-01",
+    "Valore": 5.91096
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 9,
+    "Data": "2024-09-01",
+    "Valore": 5.434144
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 9,
+    "Data": "2024-09-01",
+    "Valore": 4.505817
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 10,
+    "Data": "2024-10-01",
+    "Valore": 6.842511
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 10,
+    "Data": "2024-10-01",
+    "Valore": 6.052775
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 10,
+    "Data": "2024-10-01",
+    "Valore": 5.646531
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 10,
+    "Data": "2024-10-01",
+    "Valore": 4.630073
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 11,
+    "Data": "2024-11-01",
+    "Valore": 6.973747
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 11,
+    "Data": "2024-11-01",
+    "Valore": 6.146997
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 11,
+    "Data": "2024-11-01",
+    "Valore": 5.707795
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 11,
+    "Data": "2024-11-01",
+    "Valore": 4.691086
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2024,
+    "Mese": 12,
+    "Data": "2024-12-01",
+    "Valore": 6.979485
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2024,
+    "Mese": 12,
+    "Data": "2024-12-01",
+    "Valore": 6.204252
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2024,
+    "Mese": 12,
+    "Data": "2024-12-01",
+    "Valore": 5.777881
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2024,
+    "Mese": 12,
+    "Data": "2024-12-01",
+    "Valore": 4.754174
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 1,
+    "Data": "2025-01-01",
+    "Valore": 7.197801
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 1,
+    "Data": "2025-01-01",
+    "Valore": 6.321134
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 1,
+    "Data": "2025-01-01",
+    "Valore": 5.870403
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 1,
+    "Data": "2025-01-01",
+    "Valore": 4.851717
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 2,
+    "Data": "2025-02-01",
+    "Valore": 7.326432
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 2,
+    "Data": "2025-02-01",
+    "Valore": 6.419356
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 2,
+    "Data": "2025-02-01",
+    "Valore": 5.943201
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 2,
+    "Data": "2025-02-01",
+    "Valore": 4.925179
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 3,
+    "Data": "2025-03-01",
+    "Valore": 7.483611
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 3,
+    "Data": "2025-03-01",
+    "Valore": 6.550332
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 3,
+    "Data": "2025-03-01",
+    "Valore": 6.047235
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 3,
+    "Data": "2025-03-01",
+    "Valore": 5.022785
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 4,
+    "Data": "2025-04-01",
+    "Valore": 7.345114
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 4,
+    "Data": "2025-04-01",
+    "Valore": 6.494989
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 4,
+    "Data": "2025-04-01",
+    "Valore": 5.973183
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 4,
+    "Data": "2025-04-01",
+    "Valore": 4.970486
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 5,
+    "Data": "2025-05-01",
+    "Valore": 7.166005
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 5,
+    "Data": "2025-05-01",
+    "Valore": 6.405129
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 5,
+    "Data": "2025-05-01",
+    "Valore": 5.895447
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 5,
+    "Data": "2025-05-01",
+    "Valore": 4.890516
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 6,
+    "Data": "2025-06-01",
+    "Valore": 7.084213
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 6,
+    "Data": "2025-06-01",
+    "Valore": 6.383966
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 6,
+    "Data": "2025-06-01",
+    "Valore": 5.886663
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 6,
+    "Data": "2025-06-01",
+    "Valore": 4.872551
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 7,
+    "Data": "2025-07-01",
+    "Valore": 7.060763
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 7,
+    "Data": "2025-07-01",
+    "Valore": 6.373599
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 7,
+    "Data": "2025-07-01",
+    "Valore": 5.876395
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 7,
+    "Data": "2025-07-01",
+    "Valore": 4.866356
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 8,
+    "Data": "2025-08-01",
+    "Valore": 7.091127
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 8,
+    "Data": "2025-08-01",
+    "Valore": 5.775684
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 8,
+    "Data": "2025-08-01",
+    "Valore": 4.029806
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 8,
+    "Data": "2025-08-01",
+    "Valore": 4.379402
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 9,
+    "Data": "2025-09-01",
+    "Valore": 7.149645
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 9,
+    "Data": "2025-09-01",
+    "Valore": 5.959518
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 9,
+    "Data": "2025-09-01",
+    "Valore": 3.725839
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 9,
+    "Data": "2025-09-01",
+    "Valore": 4.491192
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 10,
+    "Data": "2025-10-01",
+    "Valore": 6.737454
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 10,
+    "Data": "2025-10-01",
+    "Valore": 5.685805
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 10,
+    "Data": "2025-10-01",
+    "Valore": 4.12075
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 10,
+    "Data": "2025-10-01",
+    "Valore": 4.278281
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 11,
+    "Data": "2025-11-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 11,
+    "Data": "2025-11-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 11,
+    "Data": "2025-11-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 11,
+    "Data": "2025-11-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "grassi",
+    "Anno": 2025,
+    "Mese": 12,
+    "Data": "2025-12-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "proteine",
+    "Anno": 2025,
+    "Mese": 12,
+    "Data": "2025-12-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "lattosio",
+    "Anno": 2025,
+    "Mese": 12,
+    "Data": "2025-12-01",
+    "Valore": 0.0
+  },
+  {
+    "Caseificio": "CAO",
+    "KPI": "caseina",
+    "Anno": 2025,
+    "Mese": 12,
+    "Data": "2025-12-01",
+    "Valore": 0.0
+  }
+]

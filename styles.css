@@ -1,0 +1,180 @@
+
+:root{--bg:#f5f7fb;--panel:#fff;--muted:#6b7280;--border:#e5e7eb;--radius:16px}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);font-family:Inter,system-ui}
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{background:#fff;border-right:1px solid var(--border);padding:18px}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.brand-logo{display:flex;align-items:center;gap:8px}
+.logo-agrivet{width:28px;height:28px}
+.brand-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#60a5fa,#a78bfa);display:grid;place-items:center;font-weight:800;color:white}
+.brand-title{font-weight:800;letter-spacing:.2px}
+.nav a{display:block;padding:10px 12px;border-radius:12px;color:#111;text-decoration:none}
+.nav a.active,.nav a:hover{background:#eef2ff}
+.topbar{background:#fff;border-bottom:1px solid var(--border)}
+.topbar-inner{padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.container{padding:18px;display:grid;gap:16px}
+.subtabs{display:flex;gap:18px;border-bottom:1px solid var(--border)}
+.subtabs a{padding:12px 2px;margin-bottom:-1px;text-decoration:none;color:var(--muted);font-weight:600;border-bottom:2px solid transparent}
+.subtabs a.active{color:#111;border-bottom-color:#2563eb}
+.filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.select{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px 10px}
+.select.compact{padding:6px 8px}
+.toggle{display:inline-grid;grid-auto-flow:column;background:#fff;border:1px solid var(--border);border-radius:999px;padding:4px;position:relative}
+.toggle .bg{position:absolute;inset:4px;border-radius:999px;background:#e0e7ff;transform:translateX(100%);width:calc(50% - 4px)}
+.toggle input{position:absolute;opacity:0;pointer-events:none}
+.toggle label{padding:8px 14px;border-radius:999px;font-weight:700;color:var(--muted);cursor:pointer;z-index:1}
+.toggle[data-active="miei"] .bg{transform:translateX(0)}
+.toggle[data-active="miei"] label[for="miei-dati"], .toggle[data-active="conf"] label[for="confronto"]{color:#111}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius)}
+.card .head{padding:14px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.chart{margin:12px;border-radius:14px;height:300px;position:relative}
+.chart.small{height:240px}
+.legend .swatch{width:12px;height:12px;border-radius:999px;display:inline-block;margin-right:6px}
+.key-2023 .swatch{background:#3b82f6} .key-2024 .swatch{background:#f59e0b} .key-2025 .swatch{background:#22c55e}
+.key-az .swatch{background:#6366f1} .key-med .swatch{background:#0ea5e9}
+.muted{color:var(--muted)}
+.placeholder{padding:24px;text-align:center;color:var(--muted)}
+.subhead{padding:10px 14px 0;display:flex;justify-content:space-between;align-items:center}
+.explain{padding:0 14px 8px;font-size:13px}
+.year-boxes{display:flex;gap:10px;flex-wrap:wrap}
+.wrap{align-items:flex-start;gap:12px;flex-wrap:wrap}
+.customPeriod{display:none;gap:6px;align-items:center}
+.push{margin-left:auto}
+.view{display:none} .view.active{display:block}
+@media(max-width:1100px){.app{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr}}
+
+
+.role-label {
+  margin-left: auto;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #16a34a; /* verde agrivet */
+  font-weight: 600;
+  padding-right: 10px;
+  align-self: center;
+}
+
+
+.benchmark-options {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+.benchmark-label {
+  font-weight: 600;
+  white-space: nowrap;
+  color: #334155;
+}
+
+
+
+.flipper-button {
+  display: inline-block;
+  background: linear-gradient(to bottom, #007BFF, #0056b3);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 50px;
+  transform: skewX(-20deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.flipper-button:hover {
+  transform: skewX(-20deg) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.flipper-button span {
+  display: inline-block;
+  transform: skewX(20deg); /* annulla la distorsione del testo */
+}
+
+
+
+/* === BOTTONI 3D PER CAMBIO UI === */
+
+.ui-switch-button {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  box-shadow:
+    0 5px 0 rgba(0,0,0,0.25),
+    0 10px 18px rgba(0,0,0,0.35);
+
+  transition:
+    transform 0.08s ease-out,
+    box-shadow 0.08s ease-out,
+    filter 0.15s ease-out;
+}
+
+.ui-switch-button:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 2px 0 rgba(0,0,0,0.3),
+    0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Colori */
+.ui-red  { background: linear-gradient(145deg, #d00000, #a00000); }
+.ui-blue { background: linear-gradient(145deg, #2563eb, #1e3a8a); }
+
+/* Frecce */
+.ui-arrow-right { font-size: 16px; }
+.ui-arrow-left  { font-size: 16px; }
+
+/* HOVER: effetto glow + movimento leggero */
+.ui-switch-button:hover {
+  filter: brightness(1.2);
+  box-shadow:
+    0 6px 0 rgba(0,0,0,0.25),
+    0 12px 22px rgba(0,0,0,0.45),
+    0 0 14px rgba(255,255,255,0.4);
+}
+
+/* TOOLTIP elegante */
+.ui-switch-button::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20,20,20,0.92);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.25s ease-out;
+}
+
+.ui-switch-button:hover::after {
+  opacity: 1;
+}
+
+
+#kpiChartHost canvas {
+  height: 100% !important;
+}
