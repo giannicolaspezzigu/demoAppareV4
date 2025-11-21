@@ -366,7 +366,7 @@
     }
 
     const kpi = getSelectedKpi();
-    const unit = getKpiUnit(kpi);
+    const unit = '%';
 
     // dati della cisterna del caseificio CAO
     const rowsCao = window.CAO.filter({ kpi, caseificio: 'CAO' });
@@ -478,10 +478,38 @@
       }
     }
 
-    // niente secondo titolo: lasciamo la legend vuota
     if (legendEl) {
-      legendEl.textContent = '';
+      legendEl.textContent = 'Media caseificio: linea continua · Media aziende: linea tratteggiata';
     }
+  }
+
+  function ensureGroupToggle() {
+    const hostHead = document.getElementById('kpiChartHost')?.previousElementSibling;
+    if (!hostHead) return null;
+
+    let toggle = document.getElementById('showMedian');
+    if (toggle) return toggle;
+
+    const wrap = document.createElement('label');
+    wrap.style.marginLeft = 'auto';
+    wrap.style.fontSize = '13px';
+    wrap.style.display = 'inline-flex';
+    wrap.style.gap = '6px';
+    wrap.style.alignItems = 'center';
+
+    const chk = document.createElement('input');
+    chk.type = 'checkbox';
+    chk.id = 'showMedian';
+    chk.checked = true;
+
+    const txt = document.createElement('span');
+    txt.textContent = 'Mostra media aziende';
+
+    wrap.appendChild(chk);
+    wrap.appendChild(txt);
+    hostHead.appendChild(wrap);
+
+    return chk;
   }
 
   // ---------- render grafico KPI ----------
@@ -599,6 +627,8 @@
 
   // ---------- binding UI ----------
   function bindUi() {
+    ensureGroupToggle();
+
     // cambio KPI
     const kpiSel = document.getElementById('indicatore');
     if (kpiSel) {
@@ -629,7 +659,7 @@
     });
 
     // toggle media gruppo (usa la checkbox "Mostra mediana", già presente)
-    const medianToggle = document.getElementById('showMedian');
+    const medianToggle = ensureGroupToggle();
     if (medianToggle) {
       medianToggle.addEventListener('change', () => {
         if (!kpiChart) return;
