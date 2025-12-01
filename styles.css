@@ -178,3 +178,32 @@
 #kpiChartHost canvas {
   height: 100% !important;
 }
+
+#histChartHost {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Adjusting year-boxes styles for better visibility */
+/*
+#view-conf .year-boxes { font-size: 14px; }
+#view-conf .year-boxes input[type="checkbox"] { transform: scale(1.1); margin-right: 4px; }
+#view-conf .year-boxes label { font-size: 14px; }
+#view-conf .year-boxes input[type="checkbox"] { transform: scale(1.1); margin-right: 4px; }
+
+#view-conf .year-boxes label { font-size: 14px; line-height: 1.2; }
+#view-conf .year-boxes input[type="checkbox"] { transform: scale(1.1); margin-right: 4px; }
+
+#view-conf .year-boxes label { font-size: 14px; line-height: 1.2; }
+#view-conf .year-boxes input[type="checkbox"] { transform: scale(1.1); margin-right: 4px; }
+ */
+#view-conf .year-boxes label,
+#view-conf .year-boxes label span {
+  font-size: 14px !important;
+  line-height: 1.2;
+}
+#view-conf .year-boxes input[type="checkbox"] {
+  transform: scale(1.1);
+  margin-right: 4px;
+}

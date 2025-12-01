@@ -1,7 +1,25 @@
-// dataLoader.js — carica data.json e popola window.RAW senza toccare app.js
+// dataLoader.js - carica data.json e popola window.RAW senza toccare benchmarkAllevatore.js
+// COSA FA (alto livello)
+// - Scarica data.json (no-cache) e popola window.RAW con il dataset aziendale.
+// - Se il fetch fallisce imposta RAW=[].
+// - Notifica il caricamento con l'evento custom "raw:loaded" (detail: {source,size}).
+//
+// FLUSSO
+// - All'avvio (DOMContentLoaded) chiama loadJson().
+// - loadJson(): fetch data.json -> set window.RAW -> dispatch "raw:loaded".
+//   In caso di errore: imposta RAW=[] e dispatch "raw:loaded" (source 'none').
+//
+// DIPENDENZE
+// - fetch API disponibile.
+// - Consumatori: benchmarkAllevatore.js, performanceAllevatore.js (ascoltano "raw:loaded").
 (function(){
   const SRC = './data.json?v=' + Date.now();
 
+  /**
+   * Scarica data.json (no-cache) e popola window.RAW, notificando con evento "raw:loaded".
+   * In caso di errore, setta RAW=[] e notifica con source 'none'.
+   * Emitted event detail: { source: 'json'|'none', size: <numero record> }.
+   */
   async function loadJson() {
     try {
       const resp = await fetch(SRC, { cache: 'no-store' });
@@ -15,22 +33,13 @@
       }
       throw new Error('JSON vuoto o non array');
     } catch (err) {
-      console.warn('[dataLoader] fetch fallito, provo seed:', err);
-      try {
-        const seedTag = document.getElementById('seed');
-        const seed = seedTag && seedTag.textContent ? JSON.parse(seedTag.textContent) : [];
-        window.RAW = Array.isArray(seed) ? seed : [];
-        console.log('[dataLoader] DATA SOURCE:', 'seed', window.RAW.length);
-        document.dispatchEvent(new CustomEvent('raw:loaded', { detail: { source: 'seed', size: window.RAW.length } }));
-      } catch (e2) {
-        window.RAW = [];
-        console.warn('[dataLoader] nessun dato disponibile.');
-        document.dispatchEvent(new CustomEvent('raw:loaded', { detail: { source: 'none', size: 0 } }));
-      }
+      console.warn('[dataLoader] fetch fallito:', err);
+      window.RAW = [];
+      document.dispatchEvent(new CustomEvent('raw:loaded', { detail: { source: 'none', size: 0 } }));
     }
   }
 
-  // Parti appena possibile (defer lo farà a DOM pronto)
+  // Parti appena possibile (defer lo fara a DOM pronto)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadJson);
   } else {

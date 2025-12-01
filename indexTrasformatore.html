@@ -78,7 +78,7 @@
           <span class="muted">Produzioni Animali</span> › Qualità del Latte
         </div>
         <div class="actions">
-          <button id="demo" data-credit="demo" class="select compact" title="Credit">Demo</button>
+          <button id="credit" data-credit="credit" class="select compact" title="Credits">Credits</button>
         </div>
       </div>
     </div>
@@ -195,13 +195,13 @@
           <div class="card">
             <div class="head wrap">
               <div>
+                <div class="year-boxes" style="margin-bottom:6px;">
+                  <label><input type="checkbox" id="yr2023" checked> <span id="yr2023Lbl">2023-24</span></label>
+                  <label><input type="checkbox" id="yr2024" checked> <span id="yr2024Lbl">2024-25</span></label>
+                  <label><input type="checkbox" id="yr2025" checked> <span id="yr2025Lbl">2025-26</span></label>
+                </div>
                 <div class="card-title">KPI: Dati Caseificio vs media del gruppo di aziende</div>
                 <div class="legend muted"></div>
-              </div>
-              <div class="year-boxes">
-                <label><input type="checkbox" id="yr2023" checked> <span id="yr2023Lbl">2023-24</span></label>
-                <label><input type="checkbox" id="yr2024" checked> <span id="yr2024Lbl">2024-25</span></label>
-                <label><input type="checkbox" id="yr2025" checked> <span id="yr2025Lbl">2025-26</span></label>
               </div>
             </div>
             <div class="chart small" id="kpiChartHost">
@@ -213,9 +213,9 @@
           <div class="card">
             <div class="head wrap">
               <div>
-                <div class="card-title">Distribuzione del gruppo (istogramma)</div>
+                <div class="card-title">Distribuzione del gruppo </div>
                 <div class="legend">
-                  asse X = valore KPI (bin automatici) · asse Y = frequenza %
+                  asse X = valore KPI  · asse Y = frequenza %
                 </div>
               </div>
               <div class="period-controls">

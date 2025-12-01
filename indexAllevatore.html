@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>appàre – Qualità del Latte · Benchmark (GOIA SILVIA)</title>
+  <title>app&agrave;re &ndash; Qualit&agrave; del Latte &ndash; Benchmark (GOIA SILVIA)</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,9 @@
   <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
   
   <script defer src="dataLoader.js"></script>
-  <script defer src="app.js"></script>
-  <script defer src="mieiDati.js"></script>
+  <script defer src="loaderCaseificio.js"></script>
+  <script defer src="benchmarkAllevatore.js"></script>
+  <script defer src="performanceAllevatore.js"></script>
  
  
 </head>
@@ -30,17 +31,17 @@
         <strong>AgriVet</strong>
       </div>
       <div class="brand-badge">A</div>
-      <div class="brand-title">appàre</div>
+      <div class="brand-title">app&agrave;re</div>
     </div>
     <nav class="nav">
       <a href="#" class="active">🏠 Home</a>
-      <a href="#">📊 Produzioni Animali</a>
-      <a href="#">🩺 Sanità Animale</a>
-      <a href="#">🧪 Sicurezza Alimentare</a>
+      <a href="#">🐄 Produzioni Animali</a>
+      <a href="#">🩺 Sanit&agrave; Animale</a>
+      <a href="#">🛡️ Sicurezza Alimentare</a>
       <a href="#">🌾 Produzioni Foraggere</a>
-      <a href="#">🩻 Controllo Medico</a>
-      <a href="#">👤 Ricerca Individuo</a>
-      <a href="#">🗺️ Esplora</a>
+      <a href="#">🧪 Controllo Medico</a>
+      <a href="#">🔍 Ricerca Individuo</a>
+      <a href="#">🧭 Esplora</a>
     </nav>
 
     <button
@@ -48,7 +49,7 @@
       data-tip="Passa alla UI Trasformatore"
       onclick="location.href='indexTrasformatore.html'">
       UI Trasformatore
-      <span class="ui-arrow-right">➜</span>
+      <span class="ui-arrow-right">&rarr;</span>
     </button>
 
 
@@ -59,10 +60,10 @@
 
   <main class="main">
     <div class="topbar"><div class="topbar-inner">
-      <div class="breadcrumbs"><span class="muted">Produzioni Animali</span> › Qualità del Latte</div>
+      <div class="breadcrumbs"><span class="muted">Produzioni Animali</span> &rsaquo; Qualit&agrave; del Latte</div>
       
       <div class="actions">
-    <button id="demo" data-credit="demo" class="select compact" title="Credit">Demo</button>
+    <button id="credit" data-credit="credit" class="select compact" title="Credits">Credits</button>
     </div>
       
     </div></div>
@@ -71,7 +72,7 @@
       <div class="subtabs">
         <a href="#" class="tab">Lista animali</a>
         <a href="#" class="tab">Gruppi</a>
-        <a href="#" class="tab active">Qualità del Latte</a>
+        <a href="#" class="tab active">Qualit&agrave; del Latte</a>
         <a href="#" class="tab">Storico</a>
 
         <span class="role-label">allevatore</span>
@@ -81,11 +82,16 @@
         <div class="select">
           <label for="indicatore">Indicatore</label>
           <select id="indicatore">
+            <option value="grassi">Grasso</option>
+            <option value="proteine">Proteine</option>
+            <option value="caseina">Caseina</option>
+            <option value="lattosio">Lattosio</option>
             <option value="cellule">Cellule Somatiche</option>
             <option value="carica">Carica Batterica</option>
             <option value="urea">Urea</option>
-            <option value="grassi">Grassi</option>
-            <option value="proteine">Proteine</option>
+            <option value="crio">Crioscopia</option>
+            <option value="ph">pH</option>
+            <option value="nacl">NaCl</option>
           </select>
         </div>
         <div class="select">Azienda: <strong id="aziendaHeader">GOIA SILVIA</strong></div>
@@ -117,7 +123,7 @@
             </select>
           </div>
 
-          <!-- 🆕 qui appare la scritta "Caseificio: XXX" -->
+          <!-- qui appare la scritta "Caseificio: XXX" -->
           <span id="caseificioLabel" class="muted" style="margin-left: 8px;"></span>
           
 
@@ -125,12 +131,13 @@
         </div>
 
 
+      <!-- Vista Performance (solo azienda) gestita da performanceAllevatore.js -->
       <div class="view" id="view-miei">
   <div class="grid-2">
     <div class="card">
       <div class="head">
         <div>
-          <div class="card-title">Valori assoluiti KPI per campione (lattazione)</div>
+          <div class="card-title">Valori assoluti KPI per campione (lattazione)</div>
           <div class="muted"></div>
         </div>
         <div id="md-year-boxes" class="year-boxes"></div>
@@ -139,12 +146,11 @@
     </div>
 
     <div class="card">
-      <div class="head"><strong>Andamento medie geometriche a norma di legge  - progressiva cumulativa </strong></div>
-      <div class="placeholder">—</div>
+      <div class="head"><strong>Andamento medie geometriche a norma di legge - progressiva cumulativa </strong></div>
+      <div class="placeholder">&hellip;</div>
     </div>
   </div>
 </div>
-
 
 
 
@@ -153,41 +159,37 @@
           <div class="card">
             <div class="head">
               <div>
-                <div class="card-title">
-                  Posizionamento percentile (PR)
-                  <span id="benchmarkCount" class="muted" style="margin-left: 8px; font-weight: normal;"></span>
-                </div>
+                <div class="card-title"></div>
                 <div class="legend muted"></div>
-
-                
-                
-                
-              </div>
-              <div class="year-boxes">
+                <div class="year-boxes" style="margin-top:6px;">
                 <label><input type="checkbox" id="yr2023" checked> <span id="yr2023Lbl">2023-24</span></label>
                 <label><input type="checkbox" id="yr2024" checked> <span id="yr2024Lbl">2024-25</span></label>
                 <label><input type="checkbox" id="yr2025" checked> <span id="yr2025Lbl">2025-26</span></label>
               </div>
+              </div>
+              <div class="card-title" style="margin-top:8px;">
+                <span id="benchmarkCount" class="muted" style="font-weight: normal;"></span>
+              </div>
             </div>
-            <div class="explain muted">
-              La posizione percentile indica la collocazione dell’azienda rispetto a tutte le altre. <br>
-              <em>80° percentile</em> ⇒ migliore dell’80% delle aziende del campione.
-            </div>
-            <div class="chart" id="prChartHost"><canvas></canvas></div>
-
             <div class="subhead">
-              <div class="card-title">Valore KPI: Azienda vs mediana del gruppo</div>
+              <div class="card-title"></div>
               <div class="legend muted">
               </div>
             </div>
             <div class="chart small" id="kpiChartHost"><canvas></canvas></div>
+
+            <div class="muted" style="margin:12px 0 8px; font-weight: 600; font-size: 14px;">Posizionamento percentile (PR)</div>
+            <div class="chart" id="prChartHost"><canvas></canvas></div>
+            <div class="explain muted" style="margin-top:12px;">
+              La posizione percentile indica la collocazione dell'azienda rispetto alle altre. <br>
+              <em>80&ordm; percentile</em> &rarr; valore pi&ugrave; elevato dell'80% delle aziende considerate.
+            </div>
           </div>
 
           <div class="card">
             <div class="head wrap">
               <div>
-                <div class="card-title">Distribuzione del gruppo (istogramma)</div>
-                <div class="legend">asse X = valore KPI (bin automatici) · asse Y = frequenza %</div>
+                <div class="card-title">Distribuzione del gruppo &middot; asse X = valore KPI &middot; asse Y = frequenza %</div>
               </div>
               <div class="period-controls">
                 <label>Periodo</label>
@@ -203,7 +205,7 @@
                   <button class="select compact" id="applyCustom">Applica</button>
                 </div>
               </div>
-              <div id="posBadge" class="muted push">—° percentile</div>
+              <div id="posBadge" class="muted push">&mdash; percentile</div>
             </div>
             <div class="chart" id="histChartHost"><canvas></canvas></div>
           </div>
@@ -212,7 +214,6 @@
     </section>
   </main>
 </div>
-
 
 
 
