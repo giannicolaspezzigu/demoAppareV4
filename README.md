@@ -1,2 +1,0 @@
-# develop
-prove sviluppo
