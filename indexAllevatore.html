@@ -15,8 +15,95 @@
   <script defer src="loaderCaseificio.js"></script>
   <script defer src="benchmarkAllevatore.js"></script>
   <script defer src="performanceAllevatore.js"></script>
- 
- 
+  <script defer src="meteo.js"></script>
+
+  <style>
+    /* Sezione Meteo (Performance): toggle compatto e marcato */
+    #meteoDetails > summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    #meteoDetails > summary::-webkit-details-marker {
+      display: none;
+    }
+    #meteoDetails > summary::marker {
+      content: "";
+    }
+    #meteoDetails > summary.meteo-summary {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(37, 99, 235, 0.28);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.22), rgba(14, 165, 233, 0.14));
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.14);
+      user-select: none;
+    }
+    #meteoDetails > summary.meteo-summary:hover {
+      border-color: rgba(37, 99, 235, 0.5);
+      box-shadow: 0 14px 34px rgba(37, 99, 235, 0.18);
+    }
+    #meteoDetails[open] > summary.meteo-summary {
+      border-color: rgba(99, 102, 241, 0.55);
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(14, 165, 233, 0.12));
+    }
+    #meteoDetails > summary.meteo-summary:focus-visible {
+      outline: 3px solid rgba(99, 102, 241, 0.35);
+      outline-offset: 2px;
+    }
+
+    #meteoDetails .meteo-summary__accent {
+      flex: 0 0 5px;
+      align-self: stretch;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #0ea5e9, #6366f1);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+    }
+    #meteoDetails .meteo-summary__icon {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    }
+    #meteoDetails .meteo-summary__icon svg {
+      width: 18px;
+      height: 18px;
+      opacity: 0.95;
+    }
+    #meteoDetails .meteo-summary__text {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    #meteoDetails .meteo-summary__title {
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+      letter-spacing: 0.2px;
+    }
+    #meteoDetails .meteo-summary__chevron {
+      margin-left: auto;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid rgba(15, 23, 42, 0.55);
+      border-bottom: 2px solid rgba(15, 23, 42, 0.55);
+      transform: rotate(45deg);
+      transition: transform 160ms ease, border-color 160ms ease;
+      flex: 0 0 auto;
+    }
+    #meteoDetails[open] .meteo-summary__chevron {
+      transform: rotate(-135deg);
+      border-color: rgba(15, 23, 42, 0.65);
+    }
+  </style>
+  
+  
 </head>
 <body>
 <div class="app">
@@ -150,6 +237,46 @@
       <div class="placeholder">&hellip;</div>
     </div>
   </div>
+
+  <!-- Sezione Meteo (placeholder): attivabile e gestita in futuro da meteo.js -->
+  <details id="meteoDetails" class="meteo-details" style="margin-top:16px;" open>
+    <summary class="meteo-summary">
+      <span class="meteo-summary__accent" aria-hidden="true"></span>
+      <span class="meteo-summary__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 18h9.5a4 4 0 0 0 .2-8 6.2 6.2 0 0 0-12 1.6A3.4 3.4 0 0 0 7.5 18Z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="meteo-summary__text">
+        <span class="meteo-summary__title">Meteo</span>
+      </span>
+      <span class="meteo-summary__chevron" aria-hidden="true"></span>
+    </summary>
+
+    <div id="meteoContent" style="margin-top:16px; display:grid; gap:16px;">
+      <div class="grid-2">
+        <div class="card">
+          <div class="head"><strong>Grafico meteo 1</strong></div>
+          <div class="chart" id="meteoChart1Host"><canvas></canvas></div>
+        </div>
+        <div class="card">
+          <div class="head"><strong>Grafico meteo 2</strong></div>
+          <div class="chart" id="meteoChart2Host"><canvas></canvas></div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="head"><strong>Grafico meteo 3</strong></div>
+          <div class="chart" id="meteoChart3Host"><canvas></canvas></div>
+        </div>
+        <div class="card">
+          <div class="head"><strong>Grafico meteo 4</strong></div>
+          <div class="chart" id="meteoChart4Host"><canvas></canvas></div>
+        </div>
+      </div>
+    </div>
+  </details>
 </div>
 
 
